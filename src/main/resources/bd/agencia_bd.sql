@@ -119,7 +119,7 @@ values
 
 create table red_social(
 id_red_social int primary key not null,
-enlace varchar(45) not null,
+enlace varchar(200) not null,
 id_tipo_social int not null,
 cuenta varchar(45) not null,
 constraint Fk_tipo_red_social_red_social foreign key(id_tipo_social)
@@ -127,6 +127,7 @@ references tipo_red_social(id_tipo_social),
 constraint Fk_red_social_user_agencia foreign key(cuenta)
 references user_agencia(cuenta)
  );
+ 
  
  create table multimedia_lugar(
  id_multimedia int primary key not null,
@@ -193,6 +194,7 @@ UPDATE `turismo_bd`.`categoria_tour` SET `nombre` = 'deporte extremo' WHERE (`id
  );
  insert into tour
  value(1, "Mata la Che", null, 45, null, current_timestamp(), null, current_date(), "lorem", 2);
+ 
  
  create table multimedia_tour (
  id_multimedia varchar(45) primary key not null,
